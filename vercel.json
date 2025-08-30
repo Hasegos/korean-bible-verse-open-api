@@ -1,19 +1,14 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://korean-bible-verse-open-api.vercel.app/api/verse"
+      "src": "pom.xml",
+      "use": "@vercel/java"
     }
   ],
-  "headers": [
+  "rewrites": [
     {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=5"
-        }
-      ]
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
