@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+   name: bible_verse_api
+
+  jackson:
+    serialization:
+      indent-output: true
+    default-property-inclusion: NON_NULL
