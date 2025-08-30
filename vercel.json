@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://<cloud-run-url>/api/$1"
+      "destination": "https://korean-bible-verse-open-api.vercel.app/api/verse"
     }
   ],
   "headers": [
