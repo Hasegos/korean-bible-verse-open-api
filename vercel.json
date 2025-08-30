@@ -1,10 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "pom.xml",
-      "use": "@vercel/java"
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
