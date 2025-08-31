@@ -47,7 +47,7 @@ import java.net.URI;
 
 HttpClient client = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://bible-verse-api.vercel.app/api/verse"))
+    .uri(URI.create("https://bible-verse-api.up.railway.app/api/verse"))
     .build();
 
 HttpResponse<String> response = client.send(request, 
