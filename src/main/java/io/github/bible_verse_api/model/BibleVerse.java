@@ -1,6 +1,7 @@
 package io.github.bible_verse_api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class BibleVerse {
 
     @JsonProperty("book")
@@ -22,18 +24,11 @@ public class BibleVerse {
     @JsonProperty("text")
     private String text;
 
-    public BibleVerse(String book, String chapter, String verse, String text) {
-        this.book = book;
-        this.chapter = chapter;
-        this.verse = verse;
-        this.text = text;
-    }
-
     @JsonProperty(value = "reference", access = JsonProperty.Access.READ_ONLY)
     public String getReference(){
         if(book == null || chapter == null || verse == null){
             return null;
         }
-        return  book + " " + chapter + ":" + verse;
+        return String.format("%s %s:%s", this.book, this.chapter, this.verse);
     }
 }
