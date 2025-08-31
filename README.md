@@ -6,7 +6,7 @@
 
 ## 🌐 API 주소
 ```
-GET https://bible-verse-api.vercel.app/api/verse
+GET bible-verse-api.up.railway.app/api/verse
 ```
 
 ## 📊 응답 형식
@@ -25,13 +25,13 @@ GET https://bible-verse-api.vercel.app/api/verse
 ### curl로 테스트
 
 ```bash
-curl https://bible-verse-api.vercel.app/api/verse
+curl bible-verse-api.up.railway.app/api/verse
 ```
 
 ### JavaScript
 
 ```javascript
-fetch('https://bible-verse-api.vercel.app/api/verse')
+fetch('https://bible-verse-api.up.railway.app/api/verse')
   .then(response => response.json())
   .then(data => {
     console.log(`${data.reference}: ${data.text}`);
